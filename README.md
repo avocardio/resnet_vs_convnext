@@ -1,6 +1,6 @@
 # Bird Species with Data Distillation
 
-
+![Bird](Data/valid/AFRICAN OYSTER CATCHER/3.jpg)
 
 This is the final project for the course 'Intro to ANNs with Tensorflow'.
 
