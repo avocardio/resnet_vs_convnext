@@ -1,4 +1,6 @@
-# Final Project
+# Bird Species with Data Distillation
+
+
 
 This is the final project for the course 'Intro to ANNs with Tensorflow'.
 
