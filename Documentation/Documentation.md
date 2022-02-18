@@ -29,7 +29,33 @@ The original dataset contains 385 different types/classes of birds, and each ima
 
 ### Model Design Decisions
 
-- Say which Lightweight CNN we used and why (vgg_cnn vs. normal_cnn)
+1) VGG16 Model or VGGNet - Very Deep Convolutional Neural Network
+====================================================================
+(https://viso.ai/deep-learning/vgg-very-deep-convolutional-networks/)
+
+The 16 in VGG16 refers to 16 layers that are being used in the Convolutional Neural Network.
+
+Bullet points (quotes, change to text format later)
+- "The VGG16 model achieves almost 92.7% top-5 test accuracy in ImageNet."
+- "It replaces the large kernel-sized filters with several 3×3 kernel-sized filters one after the other, thereby making significant improvements over AlexNet."
+- "As mentioned above, the VGGNet-16 supports 16 layers and can classify images into 1000 object categories, including keyboard, animals, pencil, mouse, etc. Additionally, the model has an image input size of 224-by-224."
+- "VGGNets are based on the most essential features of convolutional neural networks (CNN)."
+- "The VGG network is constructed with very small convolutional filters. The VGG-16 consists of 13 convolutional layers and three fully connected layers."
+
+
+- "This means that VGG16 is a pretty extensive network and has a total of around 138 million parameters. Even according to modern standards, it is a huge network. However, VGGNet16 architecture’s simplicity is what makes the network more appealing."
+- "Input: The VGGNet takes in an image input size of 224×224. For the ImageNet competition, the creators of the model cropped out the center 224×224 patch in each image to keep the input size of the image consistent."
+- "Convolutional Layers: VGG’s convolutional layers leverage a minimal receptive field, i.e., 3×3, the smallest possible size that still captures up/down and left/right. Moreover, there are also 1×1 convolution filters acting as a linear transformation of the input. This is followed by a ReLU unit, which is a huge innovation from AlexNet that reduces training time."
+- "The convolution stride is fixed at 1 pixel to keep the spatial resolution preserved after convolution (stride is the number of pixel shifts over the input matrix)."
+- "Hidden Layers: All the hidden layers in the VGG network use ReLU. VGG does not usually leverage Local Response Normalization (LRN) as it increases memory consumption and training time. Moreover, it makes no improvements to overall accuracy."
+- "Fully-Connected Layers: The VGGNet has three fully connected layers. Out of the three layers, the first two have 4096 channels each, and the third has 1000 channels, 1 for each class."
+- "The number of filters that we can use doubles on every step or through every stack of the convolution layer. This is a major principle used to design the architecture of the VGG16 network. One of the crucial downsides of the VGG16 network is that it is a huge network, which means that it takes more time to train its parameters."
+
+2) Vanilla CNN - Convolutional Neural Network
+==============================================
+
+
+
 - Which evaluation metrics do we use on our model(s)
 - How do we compare them
 
@@ -59,9 +85,11 @@ The original dataset contains 385 different types/classes of birds, and each ima
 ### Comparison of models
 
 - Which model is performing better?
-- Why do we think this is the case?
+
 
 ### Interpretation
+
+- Why do we think this is the case?
 
 
 # STEP B: Data distillation
