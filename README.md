@@ -1,4 +1,4 @@
-# Bird species classification with data distillation alternatives
+# Lightweight bird species classification with data distillation alternatives
 
 <p align="center"><img src='Data\Use\Valid\VIOLET GREEN SWALLOW\1.jpg' width=200></p>
 
