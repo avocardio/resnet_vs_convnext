@@ -50,11 +50,11 @@ This resulted in low dimensional embeddings of the images, which we saved into r
 
 Finally, we compared our results to check if data distillation is indeed able to train and perform more efficiently on our lightweight CNN: 
 
-| Method | Accuracy on Lightweight CNN | Training Time | Energy usage |
-|--------|------------------------------|---------------|--------------|
-| No preprocessing | 0.9 | 1.5 hours | ~0.5 GB |
-| Normal preprocessing | 0.9 | 1.5 hours | ~0.5 GB |
-| Distillation: Average | 0.9 | 1.5 hours | ~0.5 GB |
-| Distillation: PCA | 0.9  | 1.5 hours | ~0.5 GB |
-| Distillation: Autoencoder | 0.9  | 1.5 hours | ~0.5 GB |
+| Method | Accuracy on Lightweight CNN | Epochs | Training Time | Energy usage | 
+|--------|------------------------------|-------|-------|--------------|
+| No preprocessing | 0.9 | 1.5 hours | ~0.5 GB | ~0.5 GB |
+| Normal preprocessing | 0.97 | 50 | 140s | ~ 3688W / 0.1KWh |
+| Distillation: Average | 0.9 | 1.5 hours | ~0.5 GB | ~0.5 GB |
+| Distillation: PCA | 0.9  | 1.5 hours | ~0.5 GB |  ~0.5 GB |
+| Distillation: Autoencoder | 0.9  | 1.5 hours | ~0.5 GB | ~0.5 GB |
 
