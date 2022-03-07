@@ -53,7 +53,7 @@ Finally, we compared our results to check if data distillation is indeed able to
 | Method | Accuracy on Lightweight CNN | Epochs | Training Time | Energy usage | 
 |--------|------------------------------|-------|-------|--------------|
 | No preprocessing | 0.78 | 50 | 98 s | ~ 3668 W / 0.1 KWh  |
-| Normal preprocessing | 0.97 | 50 | 102 s | ~ 3688 W / 0.1 KWh |
+| Normal preprocessing | 0.80 | 50 | 102 s | ~ 3688 W / 0.1 KWh |
 | Distillation: Average | 0.9 | 1.5 hours | ~0.5 GB | ~0.5 GB |
 | Distillation: PCA | 0.9  | 1.5 hours | ~0.5 GB |  ~0.5 GB |
 | Distillation: Autoencoder | 0.9  | 1.5 hours | ~0.5 GB | ~0.5 GB |
