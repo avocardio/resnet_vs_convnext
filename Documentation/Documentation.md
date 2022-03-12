@@ -120,7 +120,7 @@ ________________________________________________
 
 ### Some notes about energy consumption
 
-##### About large models and consumption
+#### About large models and consumption
 
 " OpenAI trained its GPT-3 model on 45 terabytes of data. To train the final version of MegatronLM, a language model similar to but smaller than GPT-3, Nvidia ran 512 V100 GPUs over nine days.
 
@@ -131,15 +131,15 @@ The average household uses 10,649 kWh annually, according to the U.S. Energy Inf
 - Large ML models for broad tasks, like GPT-3 and MegatronLM, consume a lot of energy
 - The consumption is almost the same as the average household 3 times
 
-##### State of the art training, servers and CO2
+#### State of the art training, servers and CO2
 
 - Most big tech companies have a state of the art training and massive servers that run 24/7 
 - (Insert stats about the energy consumption of the servers, and why they have to train and infer on a 24/7 basis) 
 - Energy consumption will scale with the demand for AI, not only for tranining, but also building the supercomputers, collecting and storing the data. (Gerry McGovern, author of the book World Wide Waste.)
-- 
 
 
-##### Arguments to be made about usability vs energy consumption
+
+#### Arguments to be made about usability vs energy consumption
 
 - Large models obviously cover more usability than smaller models
     - GTP-3 can do things that it was not even designed to do
@@ -152,7 +152,7 @@ The average household uses 10,649 kWh annually, according to the U.S. Energy Inf
     - If we think ahead to the use cases and physical objects with restraint memory and a limited amount of time, we can use smaller models instead of bigger ones to solve niche problems
         - Take for example a safari camera that also can predict the class of a birds
 
-##### About energy consumption and the future of machine learning 
+#### About energy consumption and the future of machine learning 
 
 - Without getting too political, rising prices in energy will also affect the electric infrastructure without a doubt, and seeking cheaper training options will be more desirable in the future
 - (Insert info about rising prices in energy and the number of new cloud computing users / ML engineers) 
