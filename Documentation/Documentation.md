@@ -116,3 +116,43 @@ COMMENT: input from miguel
 - Why do we think this is the case?
 
 
+________________________________________________
+
+### Some notes about energy consumption
+
+##### About large models and consumption
+
+" OpenAI trained its GPT-3 model on 45 terabytes of data. To train the final version of MegatronLM, a language model similar to but smaller than GPT-3, Nvidia ran 512 V100 GPUs over nine days.
+
+A single V100 GPU can consume between 250 and 300 watts. If we assume 250 watts, then 512 V100 GPUS consumes 128,000 watts, or 128 kilowatts (kW). Running for nine days means the MegatronLM's training cost 27,648 kilowatt hours (kWh).
+
+The average household uses 10,649 kWh annually, according to the U.S. Energy Information Administration. Therefore, training the final version of MegatronLM used almost the amount of energy three homes use in a year. " (https://www.techtarget.com/searchenterpriseai/feature/Energy-consumption-of-AI-poses-environmental-problems#:~:text=AI%20energy%20consumption%20during%20training&text=A%20single%20V100%20GPU%20can,27%2C648%20kilowatt%20hours%20(kWh).)
+
+- Large ML models for broad tasks, like GPT-3 and MegatronLM, consume a lot of energy
+- The consumption is almost the same as the average household 3 times
+
+##### State of the art training, servers and CO2
+
+- Most big tech companies have a state of the art training and massive servers that run 24/7 
+- (Insert stats about the energy consumption of the servers, and why they have to train and infer on a 24/7 basis) 
+- Energy consumption will scale with the demand for AI, not only for tranining, but also building the supercomputers, collecting and storing the data. (Gerry McGovern, author of the book World Wide Waste.)
+- 
+
+
+##### Arguments to be made about usability vs energy consumption
+
+- Large models obviously cover more usability than smaller models
+    - GTP-3 can do things that it was not even designed to do
+    - It can ..  past text generation and completion, solving math problems, translating text, describing objects, etc. with the proper prompt engineering
+    - But just infereing with the model is very computationally expensive
+
+- Smaller models can be used for very specific tasks
+    - Like we saw in our project, a small ConvNet can still relatively perform well on the task of predicting the class of a bird
+    - Infereing is very cheap and takes very little time
+    - If we think ahead to the use cases and physical objects with restraint memory and a limited amount of time, we can use smaller models instead of bigger ones to solve niche problems
+        - Take for example a safari camera that also can predict the class of a birds
+
+##### About energy consumption and the future of machine learning 
+
+- Without getting too political, rising prices in energy will also affect the electric infrastructure without a doubt, and seeking cheaper training options will be more desirable in the future
+- (Insert info about rising prices in energy and the number of new cloud computing users / ML engineers) 
