@@ -115,6 +115,57 @@ COMMENT: input from miguel
 
 - Why do we think this is the case?
 
+________________________________________________
+
+ConvNext: aka ConvNets vs Transformers 
+
+- Take improvements from transformers and implement into a convnet 
+- They are competitive with transformers in tasks of image segmentation and object detection
+
+
+Paraphrasing form paper 'A ConvNet for the 2020's':
+
+- They start praising that convnets drove the deepnet renaissance in 2012
+- All made networks from that time for image recognition used convolutions 
+- Convolutions are not shifting (translational) variant but shiting equivatriant
+    - It takes spatial pooling layers to make it approximately equivariant (have objects be in the same spot)
+- Transformers (from 2017) have shown some application on image generation or image understanding
+- The transformer architecture is usable out of the box for images
+- The solution space of transformers is larger than for CNNs, due to their image splitting for sequences and not being translation equivariant    
+    - The transformer architecture is also more flexible than CNNs
+- Transformers are dependent on a lot of training data augmentation
+- Splitting a high quality image for a transformer would take a lot of memory and computational space, specially when splitting sequences into 16x16px subimages. Therefore newer architectures like the swin transformer were introduced that use sliding window approaches, almost like ConvNets too 
+
+Architecture: Start with a ResNet200 
+
+- AdamW
+- More epochs
+- Heavy data augmentation
+- Regularization
+
+'Macro design'
+- Stage ratio (how many blocks in each stage)
+- Larger strides, like non-overlapping patches in transformers
+
+- Depthwise convolutions
+- Widening network
+
+- Inverted bottleneck: hidden dimension of the MLP block is four times wider than the input dimension
+
+- Larger kernel sizes: global receptive fields are bigger (but didnt really improve performance, but its proven that the opposite does worse)
+
+'Micro design'
+- relu -> gelu
+- Less activation functions
+- Fewer normalizations (like transformers), no batch normalization, but layer normalization (really something for RNNs, not CNNs)
+- Seperate downsampling layers
+
+Results -> better than the swin transformer
+
+'Modern ConvNets scale too in terms of size in data'
+
+- ConvNets can compete in semtic segmentation and object detection tasks
+- Questions for the future: **Are other architectures mordernizable too?**
 
 ________________________________________________
 
