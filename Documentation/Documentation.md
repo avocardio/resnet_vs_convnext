@@ -136,7 +136,7 @@ Paraphrasing form paper 'A ConvNet for the 2020's':
 - Transformers are dependent on a lot of training data augmentation
 - Splitting a high quality image for a transformer would take a lot of memory and computational space, specially when splitting sequences into 16x16px subimages. Therefore newer architectures like the swin transformer were introduced that use sliding window approaches, almost like ConvNets too 
 
-Architecture: Start with a ResNet200 
+Architecture: Start with a ResNet50 
 
 - AdamW
 - More epochs
