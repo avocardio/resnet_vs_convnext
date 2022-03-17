@@ -138,23 +138,27 @@ Paraphrasing form paper 'A ConvNet for the 2020's':
 
 Architecture: Start with a ResNet50 
 
+1. Overall 
 - AdamW
 - More epochs
 - Heavy data augmentation
 - Regularization
 
-'Macro design'
+2. 'Macro design'
 - Stage ratio (how many blocks in each stage)
 - Larger strides, like non-overlapping patches in transformers
 
+3. ResNeXt additions
 - Depthwise convolutions
 - Widening network
 
-- Inverted bottleneck: hidden dimension of the MLP block is four times wider than the input dimension
+4. Inverted bottleneck
+- Inverting dimensions: hidden dimension of the MLP block is four times wider than the input dimension
 
-- Larger kernel sizes: global receptive fields are bigger (but didnt really improve performance, but its proven that the opposite does worse)
+5. Larget kernel sizes
+- Global receptive fields are bigger (but didnt really improve performance, but its proven that the opposite does worse)
 
-'Micro design'
+6. 'Micro design'
 - relu -> gelu
 - Less activation functions
 - Fewer normalizations (like transformers), no batch normalization, but layer normalization (really something for RNNs, not CNNs)
@@ -194,7 +198,7 @@ The average household uses 10,649 kWh annually, according to the U.S. Energy Inf
 
 - Large models obviously cover more usability than smaller models
     - GTP-3 can do things that it was not even designed to do
-    - It can ..  past text generation and completion, solving math problems, translating text, describing objects, etc. with the proper prompt engineering
+    - It can generalize past text generation and completion, solving math problems, translating text, describing objects, etc. with the proper prompt engineering
     - But just infereing with the model is very computationally expensive
 
 - Smaller models can be used for very specific tasks
