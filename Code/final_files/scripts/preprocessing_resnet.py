@@ -1,0 +1,1 @@
+# preprocessing pipeline for resnet model
