@@ -1,5 +1,6 @@
 #!/bin/bash
 
-echo "GPU_READER"
+echo "Reading GPU..."
 
-python 
+nvidia-smi --query-gpu=index,timestamp,power.draw,clocks.sm,clocks.mem,clocks.gr --format=csv -l 10 -f ./GPU-stats.csv
+
