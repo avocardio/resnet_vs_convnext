@@ -3,8 +3,8 @@
 # imports
 import argparse
 
-from Code.files.scripts.resnet50 import ResNet50
-from scripts.preprocessing import preprocessing
+from resnet50 import ResNet50
+from preprocessing import preprocessing
 
 # setting up CLI
 parser = argparse.ArgumentParser(description = "Training models")
