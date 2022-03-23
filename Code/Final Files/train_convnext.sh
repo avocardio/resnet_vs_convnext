@@ -2,4 +2,4 @@
 
 # train convnext
 echo "  train convnext" 
-python -m scripts.train_models data/... --convnext # path to data
+python scripts/train_models.py data/... --convnext # path to data
