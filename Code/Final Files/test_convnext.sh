@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# test resnet
-echo "  test resnet" 
-python -m scripts.test_convnext data/... # path to data
+# test convnext
+echo "  test convnext" 
+python -m scripts.test_models data/... --convnext # path to data

@@ -6,4 +6,4 @@
 
 # preprocessing steps for convnext
 echo "  preprocessing convnext" 
-python -m scripts.preprocessing_convnext data/... data/... # paths to original data and to file where the new data needs to be stored
+python -m scripts.preprocessing data/... data/... --convnext # paths to original data and to file where the new data needs to be stored

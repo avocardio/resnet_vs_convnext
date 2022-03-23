@@ -1,1 +1,0 @@
-# preprocessing pipeline for convnext model

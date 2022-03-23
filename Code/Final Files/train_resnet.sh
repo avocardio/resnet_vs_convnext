@@ -2,4 +2,4 @@
 
 # train resnet
 echo "  train resnet" 
-python -m scripts.train_resnet data/... # path to data
+python -m scripts.train_models data/... --resnet # path to data

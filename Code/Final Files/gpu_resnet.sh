@@ -2,4 +2,4 @@
 
 # gpu analysis resnet
 echo "  gpu analysis resnet" 
-python -m scripts.gpu_resnet data/... # path to data if required here
+python -m scripts.gpu_analysis data/... --resnet # path to data if required here
