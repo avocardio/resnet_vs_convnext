@@ -2,4 +2,4 @@
 
 # train resnet
 echo "  train resnet" 
-python scripts/train_models.py --resnet
+python scripts/train_models.py --resnet --preprocessed
