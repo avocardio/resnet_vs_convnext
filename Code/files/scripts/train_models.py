@@ -3,7 +3,7 @@
 # imports
 import argparse
 
-from code.fina scripts.resnet50 import ResNet50
+from Code.files.scripts.resnet50 import ResNet50
 from scripts.preprocessing import preprocessing
 
 # setting up CLI
