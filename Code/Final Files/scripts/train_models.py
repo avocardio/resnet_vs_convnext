@@ -15,3 +15,7 @@ if args.resnet:
     
 if args.convnext:
     print("training function for convnext")
+
+
+# save parameters in file
+# use tf.
