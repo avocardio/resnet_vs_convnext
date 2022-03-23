@@ -18,7 +18,7 @@ args = parser.parse_args()
 
 if args.resnet and args.preprocessed:
     train_data, _, valid_data = preprocessing()
-    print("\nStarting training for ResNet50...")
+    print("\nStarting training for ResNet50:")
     model = ResNet50(num_classes=400)
     model.build(input_shape=(None, 224, 224, 3))
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
