@@ -8,6 +8,8 @@ Helper Functions
 ------------------------------------------------------------
 """
 
+seed = 2
+
 def dataset_split(ds, ds_size, train_prop=0.7, val_prop=0.15, test_prop=0.15):
     """
     Costum dataset split into training, validation and test data.
