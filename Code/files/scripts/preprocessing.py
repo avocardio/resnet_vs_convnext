@@ -71,16 +71,37 @@ def preprocessing_convnext():
         brightness_range=[0.5, 1.5], # Random brightness
         fill_mode='nearest') # Points outside the input are filled according to: aaaaaaaa|abcd|dddddddd
 
+    # with augmentation
+    """train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(
+        rescale=1./255, # Normalize
+        rotation_range=40, # Random rotation
+        width_shift_range=0.2, # Random horizontal offset
+        height_shift_range=0.2, # Random vertical offset
+        shear_range=0.2, # Random cropping 
+        zoom_range=0.2, # Random zoom
+        horizontal_flip=True, # Flip horizontally
+        zca_epsilon=1e-6, # ZCA whitening
+        brightness_range=[0.5, 1.5], # Random brightness
+        fill_mode='nearest') # Points outside the input are filled according to: aaaaaaaa|abcd|dddddddd"""
+
     test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
     valid_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
 
     # Find files from directory
-    train_data = MixupImageDataGenerator(
+    """train_data = MixupImageDataGenerator(
         generator=train_datagen,
         directory=DIR_TRAIN,
         batch_size=32,
         img_height=224,
-        img_width=224)
+        img_width=224)"""
+
+    train_data = train_datagen.flow_from_directory(
+        DIR_TRAIN,
+        target_size=(224, 224),
+        batch_size=32,
+        color_mode='rgb',
+        class_mode='categorical',
+        shuffle=True)
 
     test_data = test_datagen.flow_from_directory(
         DIR_TEST,
@@ -100,8 +121,6 @@ def preprocessing_convnext():
 
     return train_data, test_data, valid_data
 
-
-    return None
 
 # Class for mix-up implementation
 
