@@ -8,4 +8,6 @@ sleep 31
 
 echo "Running Model..."
 
-sh ./train_resnet.sh
+sh ./train_resnet.sh 
+
+exit 0
