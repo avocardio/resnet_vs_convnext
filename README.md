@@ -1,8 +1,8 @@
-# Lightweight bird species classification with data distillation alternatives
+# ConvNeXt vs ResNet50: a comparison based on energy consumption and usability
 
-<p align="center"><img src='Data\Use\Valid\VIOLET GREEN SWALLOW\1.jpg' width=200></p>
+<p align="center"><img src='Data\Use\Validation\VIOLET GREEN SWALLOW\1.jpg' width=200></p>
 
-This is the final project for the course 'Intro to ANNs using Tensorflow'. Please read the [Documentation](Documentation\Documentation.md) for more information.
+This is the final project for the course 'Intro to ANNs using Tensorflow', WiSe 2021/2022. Please read the [Documentation](Documentation\Documentation.md) for more information.
 
 <br />
 
