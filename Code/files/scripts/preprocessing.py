@@ -3,9 +3,9 @@
 import tensorflow as tf
 import numpy as np
 
-DIR_TRAIN = '../../../Data/Use/Train/'
-DIR_TEST = '../../../Data/Use/Test/'
-DIR_VALID = '../../../Data/Use/Validation/'
+DIR_TRAIN = '../../Data/Use/Train/'
+DIR_TEST = '../../Data/Use/Test/'
+DIR_VALID = '../../Data/Use/Validation/'
 
 def preprocessing():
     """
