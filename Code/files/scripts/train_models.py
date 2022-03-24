@@ -14,7 +14,7 @@ parser.add_argument("-r", "--resnet", action = "store_true", help = "starts trai
 parser.add_argument("-c", "--convnext", action = "store_true", help = "starts training for convnext")
 parser.add_argument("-p", "--preprocessed", action = "store_true", help = "uses preprocessed data")
 
-MODEL_FRAGMENTS = '../../../Data/Models/'
+MODEL_FRAGMENTS = '../../Data/Models/'
 
 args = parser.parse_args()
 
