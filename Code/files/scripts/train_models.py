@@ -33,6 +33,6 @@ if args.convnext and args.preprocessed:
     model = ConvNeXt(num_classes=400, depths=[3, 3, 9, 3], dims=[96, 192, 384, 768], include_top=True, drop_path_rate=0.1)
     model.build(input_shape=(None, 224, 224, 3))
     # need to check on optimizer
-    model.compile(optimizer=AdamW(learning_rate=0.1, weight_decay=1e-2), loss='categorical_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer=AdamW(learning_rate=0.01, weight_decay=1e-2), loss='categorical_crossentropy', metrics=['accuracy'])
     model.fit(train_data, epochs=10, validation_data=valid_data)
     model.save(MODEL_FRAGMENTS + 'convnext')

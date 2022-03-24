@@ -1,5 +1,7 @@
 # preprocessing pipelines
 
+from turtle import color
+from cv2 import COLORMAP_OCEAN
 import tensorflow as tf
 import numpy as np
 
@@ -127,6 +129,7 @@ class MixupImageDataGenerator():
                                                         target_size=(
                                                             img_height, img_width),
                                                         class_mode="categorical",
+                                                        color_mode="rgb",
                                                         batch_size=batch_size,
                                                         shuffle=True,
                                                         subset=subset)
@@ -136,6 +139,7 @@ class MixupImageDataGenerator():
                                                         target_size=(
                                                             img_height, img_width),
                                                         class_mode="categorical",
+                                                        color_mode="rgb",
                                                         batch_size=batch_size,
                                                         shuffle=True,
                                                         subset=subset)
