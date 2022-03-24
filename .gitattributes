@@ -2,3 +2,4 @@
 *.index filter=lfs diff=lfs merge=lfs -textt
 ../Data/Models/* filter=lfs diff=lfs merge=lfs -text
 Data/Models/resnet50 filter=lfs diff=lfs merge=lfs -text
+*.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
