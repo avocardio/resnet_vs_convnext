@@ -1,5 +1,4 @@
-# Old vs New: a comparison based on energy consumption and usability
-## ConvNeXt vs ResNet50
+# Old vs New: an image classification model comparison based on energy consumption and usability
 
 <p align="center"><img src='Data\Use\Validation\VIOLET GREEN SWALLOW\1.jpg' width=200></p>
 
