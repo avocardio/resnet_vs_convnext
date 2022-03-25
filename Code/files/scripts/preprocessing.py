@@ -56,7 +56,7 @@ def preprocessing_resnet():
 
     return train_data, test_data, valid_data
 
-def preprocessing_convnext():
+def preprocessing_convnext(mixup=False):
     """
     Preprocessing pipeline for the dataset.
     """
@@ -74,13 +74,21 @@ def preprocessing_convnext():
     test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
     valid_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
 
-    # Find files from directory
-    train_data = MixupImageDataGenerator(
-        generator=train_datagen,
-        directory=DIR_TRAIN,
+    if mixup == True:
+        train_data = MixupImageDataGenerator(
+            generator=train_datagen,
+            directory=DIR_TRAIN,
+            batch_size=32,
+            img_height=224,
+            img_width=224)
+    else:
+        train_data = train_datagen.flow_from_directory(
+        DIR_TRAIN,
+        target_size=(224, 224),
         batch_size=32,
-        img_height=224,
-        img_width=224)
+        color_mode='rgb',
+        class_mode='categorical',
+        shuffle=True)
 
     test_data = test_datagen.flow_from_directory(
         DIR_TEST,
