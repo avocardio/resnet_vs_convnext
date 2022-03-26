@@ -9,6 +9,21 @@ DIR_TRAIN = '../../Data/Use/Train/'
 DIR_TEST = '../../Data/Use/Test/'
 DIR_VALID = '../../Data/Use/Validation/'
 
+def load_test_set():
+    """
+    Load the test set.
+    """
+    test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
+    test_data = test_datagen.flow_from_directory(
+        DIR_TEST,
+        target_size=(224, 224),
+        batch_size=32,
+        color_mode='rgb',
+        class_mode='categorical',
+        shuffle=True)
+
+    return test_data
+
 def preprocessing_resnet():
     """
     Preprocessing pipeline for the dataset.

@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # test resnet
-echo "  test resnet" 
+echo "  testing resnet" 
 python scripts/test_models.py --resnet
