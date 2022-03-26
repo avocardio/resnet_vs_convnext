@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # test convnext
-echo "  testing convnext" 
+echo "  testing models" 
 
 # --convnext for convnext
 # --resnet for resnet

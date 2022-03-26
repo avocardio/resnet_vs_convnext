@@ -23,8 +23,8 @@ if args.resnet:
     if os.path.exists('../../Data/Models/resnet50'):
         print("loading resnet50...")
         model = tf.keras.models.load_model('../../Data/Models/resnet50')
-        loss, acc = model.evaluate(test_set, verbose=2)
         print("\n")
+        loss, acc = model.evaluate(test_set, verbose=2)
         print('Loaded ResNet-50, accuracy: {:5.2f}%'.format(100 * acc))   
         print("\n")
 
@@ -32,8 +32,8 @@ if args.convnext:
     if os.path.exists('../../Data/Models/convnext'):
         print("loading convnext...")
         model = tf.keras.models.load_model('../../Data/Models/convnext')
-        loss, acc = model.evaluate(test_set, verbose=2)
         print("\n")
+        loss, acc = model.evaluate(test_set, verbose=2)
         print('Loaded ResNet-50, accuracy: {:5.2f}%'.format(100 * acc))   
         print("\n")
 
@@ -41,16 +41,18 @@ if args.both:
     if os.path.exists('../../Data/Models/resnet50'):
         print("loading resnet50...")
         model = tf.keras.models.load_model('../../Data/Models/resnet50')
-        loss, acc = model.evaluate(test_set, verbose=2)
+        print("\n")
+        loss, acc = model.evaluate(test_set, verbose=1)
         print('Loaded ResNet-50, accuracy: {:5.2f}%'.format(100 * acc))  
         print("\n")
     else:
-        print("ResNet model not trained and saved.\n")
+        print("ResNet model not trained or saved.\n")
     if os.path.exists('../../Data/Models/convnext'):
         print("loading convnext...")
         model = tf.keras.models.load_model('../../Data/Models/convnext')
-        loss, acc = model.evaluate(test_set, verbose=2)
+        print("\n")
+        loss, acc = model.evaluate(test_set, verbose=1)
         print('Loaded ResNet-50, accuracy: {:5.2f}%'.format(100 * acc))  
         print("\n")
     else:
-        print("ConvNext model not trained and saved.\n")
+        print("ConvNext model not trained or saved.")
