@@ -4,6 +4,10 @@
 
 This is the final project for the course 'Intro to ANNs using Tensorflow', WiSe 2021/2022. Please read the [Documentation](Documentation\Documentation.md) for more information.
 
+TO-DO:
+- mention python3
+- mention shell auf GitBash ausführen (??)
+
 <br />
 
 ## Introduction
