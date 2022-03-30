@@ -8,6 +8,7 @@ sleep 31
 
 echo "Running Model..."
 
-sh ./train_convnext.sh 
+# or ./train_convnext.sh
+sh ./train_resnet.sh 
 
 exit 0
