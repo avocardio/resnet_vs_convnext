@@ -4,7 +4,6 @@
 
 This is the final project for the course 'Intro to ANNs using Tensorflow', WiSe 2021/2022. Please read the [Documentation](Documentation\Documentation.md) for more information. The requirements and user-guide can be found on the bottom of this page. 
 
-<br />
 
 ## Introduction
 
@@ -14,7 +13,6 @@ Due to its foundational changes however, even the smallest version of the ConvNe
 
 We therefore decided to compare the performance and energy consumption of ConvNeXt and ResNet50 on a real-world dataset.
 
-<br />
 
 ## Description
 
