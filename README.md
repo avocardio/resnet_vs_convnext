@@ -62,14 +62,15 @@ As we can gather from the information above, the ConvNeXt does not only take sig
 
 ### Requirements
 
-The following packages were used for this project: 
+The following packages were used for this project under Python 3.6.13: 
 
 ```
-- numpy
 - pandas
-- tensorflow
-- tensorflow-addons
+- numpy
 - matplotlib
+- tensorflow-gpu
+- tensorflow-addons
+- cv2
 ```
 
 They can be installed by using: `pip install -r requirements.txt` in the root folder. 
