@@ -1,0 +1,8 @@
+# Install required packages
+pandas==0.25.3
+numpy==1.19.5
+matplotlib==3.2.2
+tensorflow-gpu==2.6.2
+tensorflow-addons==0.14.0
+cv2==4.1.1
+
