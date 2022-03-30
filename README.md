@@ -67,13 +67,26 @@ As we can gather from the information above, the ConvNeXt does not only take sig
 The following packages were used for this project: 
 
 ```
-pip install -r requirements.txt
+- numpy
+- pandas
+- tensorflow
+- tensorflow-addons
+- matplotlib
 ```
 
 They can be installed by using: `pip install -r requirements.txt` in the root folder. 
 
 ### File directory
 
+- `Code/`: Code and notebooks
+- `Code/files/`: Executable shell scripts: training, testing, pipeline and GPU reader
+- `Code/files/scripts/`: Python scripts: models, preprocessing functions, imports
+- `Data/`: Data
+- `Data/GPU/`: GPU data from `Code/files/gpu_reader.sh`
+- `Data/Models/`: Saved model fragments after training
+- `Data/Use/`: Bird species dataset, divided in subfolders `Train/`, `Test/` and `Validation/`
+- `Documentation/`: Documentation and media 
+- `Papers/`: ConvNeXt paper
 
 ### Scripts 
 
