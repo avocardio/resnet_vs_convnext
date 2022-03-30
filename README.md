@@ -37,7 +37,7 @@ In our data pipeline, we use the following preprocessing and augmentation steps 
 
 <br />
 
-We make use of an `nvidia-smi` script, located in `Code/files/gpu_reader.sh` to measure the energy consumption of the GPU while training both models.
+We make use of an `nvidia-smi` script, located in `Code/files/gpu_reader.sh` to measure the energy consumption of the GPU while training both models. The training was performed on a GTX 1070, CUDA 11.6 and CuDNN 8.5.
 
 <br />
 
@@ -90,4 +90,10 @@ They can be installed by using: `pip install -r requirements.txt` in the root fo
 
 ### Scripts 
 
-## Final words
+To run all the shell scripts for training and testing, reading the GPU or running the entire pipeline, we make use of GitBash (which is needed if not on Linux or Mac). All shell scripts are located in `Code/files/` and can be executed by using `sh script.sh` or `bash script.sh` in the terminal. 
+
+- `train_resnet.sh`: loads the bird image data, preprocesses, trains and saves the ResNet-50 model
+- `train_convnext.sh`: loads the bird image data, preprocesses, trains and saves the ConvNext-T model
+- `test_models.sh`: loads the trained models (if saved) and tests for accuracy
+- `pipeline.sh`: runs all above scripts in order
+- `gpu_reader.sh`: starts reading GPU power draw and clocks once every 10 seconds, sleeps for 31 seconds, then starts training a specified model. After the training has concluded, the GPU reader stops and saves the data to a CSV file in `Data/GPU/`.
