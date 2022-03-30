@@ -50,7 +50,7 @@ We then evaluate the models on the test set (2000 Images) and finally compare ou
 
 The implemented ResNet-50 had no problems at all and reached a testing accuracy of 87% while only consuming about 21KWh during training. The ConvNeXt however, did not reach a significant accuracy level during training, due to mistakes in the implementation, preprocessing or the fact that it had to have been trained for more than 100 epochs. But even after 6 epochs and 3 hours of training, the network consumed about .. and we decided to stop the training completely. 
 
-<p align="center"><img src='Documentation/Media/GPU_comparison.jpg'></p>
+<p align="center"><img src='Documentation/Media/GPU_comparison.png'></p>
 
 More on this can be found in the following notebook: [gpu_analysis.ipynb](Code/gpu_analysis.ipynb)
 
