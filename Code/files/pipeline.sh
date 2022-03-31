@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-# overall pipeline for loading and preprocessing the data, running the models and and applying the GPU energy analysis
+
+# Overall pipeline for loading and preprocessing the data, running the models and testing the results
 
 echo "training resnet"
 ./train_resnet.sh

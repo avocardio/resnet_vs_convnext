@@ -1,14 +1,17 @@
-# preprocessing pipelines
+""" Preprocessing file for the bird dataset in Data/Use/ via ImageDataGenerator """
 
+# Imports
 from turtle import color
 from cv2 import COLORMAP_OCEAN
 import tensorflow as tf
 import numpy as np
 
+# Paths
 DIR_TRAIN = '../../Data/Use/Train/'
 DIR_TEST = '../../Data/Use/Test/'
 DIR_VALID = '../../Data/Use/Validation/'
 
+# Extra function to load the test set only, for test_models.py
 def load_test_set():
     """
     Load the test set.
@@ -24,6 +27,7 @@ def load_test_set():
 
     return test_data
 
+# Preprocessing for the ResNet50 model
 def preprocessing_resnet():
     """
     Preprocessing pipeline for the dataset.
@@ -47,11 +51,11 @@ def preprocessing_resnet():
     # Find files from directory
     train_data = train_datagen.flow_from_directory(
         DIR_TRAIN,
-        target_size=(224, 224),
-        batch_size=32,
-        color_mode='rgb',
-        class_mode='categorical',
-        shuffle=True)
+        target_size=(224, 224), # Keep same size as original ResNet50 input
+        batch_size=32, # Batch size 32
+        color_mode='rgb', # 3 Channels
+        class_mode='categorical', # Categorical > for categorical_crossentropy loss
+        shuffle=True) # Shuffled 
 
     test_data = test_datagen.flow_from_directory(
         DIR_TEST,
@@ -75,7 +79,7 @@ def preprocessing_convnext(mixup=False):
     """
     Preprocessing pipeline for the dataset.
     """
-    # Create an image generator, augment the training data
+    # Create an image generator, augment the training data, but less than the ResNet50, for the MixUp function
     if mixup == True:
         train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(
             rescale=1./255, # Normalize
@@ -140,7 +144,7 @@ def preprocessing_convnext(mixup=False):
 # Class for mix-up implementation
 
 class MixupImageDataGenerator():
-# inspired by https://medium.com/swlh/how-to-do-mixup-training-from-image-files-in-keras-fe1e1c1e6da6
+# Inspired by https://medium.com/swlh/how-to-do-mixup-training-from-image-files-in-keras-fe1e1c1e6da6
 
     def __init__(self, generator, directory, batch_size, img_height, img_width, alpha=0.2, subset=None):
         """Constructor for mixup image data generator.

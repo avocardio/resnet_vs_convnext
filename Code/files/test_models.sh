@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# test convnext
+# Script for testing models
+
 echo "  testing models" 
 
 # --convnext for convnext

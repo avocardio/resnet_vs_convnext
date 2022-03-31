@@ -1,4 +1,4 @@
-# test pipelines
+""" Pipelines for loading models and testing on test set. """
 
 # imports
 import argparse
@@ -17,8 +17,11 @@ parser.add_argument("-b", "--both", action = "store_true", help = "starts testin
 args = parser.parse_args()
 
 print("loading test set...")
+
+# Load test set via preprocessing.py
 test_set = load_test_set()
 
+# Only test resnet
 if args.resnet:
     if os.path.exists('../../Data/Models/resnet50'):
         print("loading resnet50...")
@@ -28,6 +31,7 @@ if args.resnet:
         print('Loaded ResNet-50, accuracy: {:5.2f}%'.format(100 * acc))   
         print("\n")
 
+# Only test convnext
 if args.convnext:
     if os.path.exists('../../Data/Models/convnext'):
         print("loading convnext...")
@@ -37,6 +41,7 @@ if args.convnext:
         print('Loaded ResNet-50, accuracy: {:5.2f}%'.format(100 * acc))   
         print("\n")
 
+# Test both if fragments are saved in the models folder
 if args.both:
     if os.path.exists('../../Data/Models/resnet50'):
         print("loading resnet50...")

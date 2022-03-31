@@ -1,8 +1,7 @@
-# train pipelines
+""" Training scripts for the models. """
 
 # imports
 import argparse
-
 from resnet50 import ResNet50
 from convnext import ConvNeXt
 from preprocessing import preprocessing_resnet, preprocessing_convnext
@@ -14,6 +13,7 @@ parser.add_argument("-r", "--resnet", action = "store_true", help = "starts trai
 parser.add_argument("-c", "--convnext", action = "store_true", help = "starts training for convnext")
 parser.add_argument("-p", "--preprocessed", action = "store_true", help = "uses preprocessed data")
 
+# Path to save the models after training
 MODEL_FRAGMENTS = '../../Data/Models/'
 
 args = parser.parse_args()
@@ -25,14 +25,14 @@ if args.resnet and args.preprocessed:
     model.build(input_shape=(None, 224, 224, 3))
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
     model.fit(train_data, epochs=10, validation_data=valid_data)
-    model.save(MODEL_FRAGMENTS + 'resnet50')
+    model.save(MODEL_FRAGMENTS + 'resnet50') # Save the model
     
 if args.convnext and args.preprocessed:
     train_data, _, valid_data = preprocessing_convnext(mixup=False)
     print("\nStarting training for ConvNeXt:")
     model = ConvNeXt(num_classes=400, depths=[3, 3, 9, 3], dims=[96, 192, 384, 768], include_top=True, drop_path_rate=0.1)
     model.build(input_shape=(None, 224, 224, 3))
-    # need to check on optimizer
+    # Use AdamW optimizer with weight decay
     model.compile(optimizer=AdamW(learning_rate=1e-4, weight_decay=1e-4), loss='categorical_crossentropy', metrics=['accuracy'])
     model.fit(train_data, epochs=10, validation_data=valid_data)
-    model.save(MODEL_FRAGMENTS + 'convnext')
+    model.save(MODEL_FRAGMENTS + 'convnext') # Save the model

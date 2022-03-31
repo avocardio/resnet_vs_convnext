@@ -1,5 +1,6 @@
-# resnet implementation
+""" Implementation of the ResNet50 model. """
 
+# Imports
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -56,6 +57,7 @@ class Block(tf.keras.Model):
         x = self.conv3(x)
         x = self.bn3(x)
 
+        # identity shortcut
         if hasattr(self, 'shortcut'):
             input = self.shortcut(input)
             input = self.bn4(input)

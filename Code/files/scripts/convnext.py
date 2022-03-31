@@ -1,4 +1,6 @@
-# convnext implementation
+""" Implementation for ConvNeXt """
+
+# Implemented from https://github.com/bamps53/convnext-tf/blob/master/models/convnext_tf.py
 
 # imports
 import numpy as np
@@ -12,7 +14,6 @@ from tensorflow.keras.layers import (Conv2D, Dense, DepthwiseConv2D,
 # Individual block class
 
 class Block(Layer):
-    # copied from https://github.com/bamps53/convnext-tf/blob/master/models/convnext_tf.py
 
     """ ConvNeXt Block (permutation from Pytorch to TF standards)
     DwConv -> Permute to (N, H, W, C); LayerNorm (channels_last) -> Linear -> GELU -> Linear; Permute back
@@ -68,7 +69,6 @@ class Block(Layer):
 # Model class
 
 class ConvNeXt(tf.keras.Model):
-    # copied from https://github.com/bamps53/convnext-tf/blob/master/models/convnext_tf.py
 
     r""" ConvNeXt
         A Tensorflow keras impl of : `A ConvNet for the 2020s`  -
