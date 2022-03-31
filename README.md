@@ -56,7 +56,7 @@ This plot is taken from our [gpu_analysis.ipynb](Code/gpu_analysis.ipynb) notebo
 
 <br />
 
-As we can gather from the information above, the ConvNeXt does not only take significantly longer to train with more power draw, but also failed to reach a significant accuracy in our implementation, partly due to it not being a simple and plain architecture and also due to mistakes on our end. This still shows that an older model such as the ResNet-50 is very much usable and a lot more power friendly, despite being released 7 years ago. 
+As we can gather from the information above, the ConvNeXt does not only take significantly longer to train with more power draw, but also failed to reach a significant accuracy in our implementation, partly due to long training expectations and also due to mistakes on our end. This still shows that an older model such as the ResNet-50 is very much usable and a lot more power friendly, despite being released 7 years ago. 
 
 ## User-Guide
 
