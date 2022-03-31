@@ -1,8 +1,8 @@
 # Install required packages
-pandas==0.25.3
-numpy==1.19.5
-matplotlib==3.2.2
-tensorflow-gpu==2.6.3
-tensorflow-addons==0.14.0
-opencv-python==4.1.1
+pandas>=0.25.3
+numpy>=1.21
+matplotlib>=3.2.2
+tensorflow-gpu>=2.6.3
+tensorflow-addons>=0.14.0
+opencv-python>=4.5.5.64
 
