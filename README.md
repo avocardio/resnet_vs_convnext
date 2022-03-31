@@ -85,7 +85,6 @@ They can be installed by using: `pip install -r requirements.txt` in the root fo
 - `Data/Models/`: Saved model fragments after training
 - `Data/Use/`: Bird species dataset, divided in subfolders `Train/`, `Test/` and `Validation/`
 - `Documentation/`: Documentation and media 
-- `Papers/`: ConvNeXt paper
 
 ### Scripts 
 
