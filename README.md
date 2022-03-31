@@ -1,4 +1,4 @@
-# ConvNeXt vs ResNet: an old vs new classification model comparison based on energy consumption and usability
+# New is not always better - A comparison of the performance and efficiency of two CNNs on a classification task
 
 <p align="center"><img src='Data\Use\Validation\VIOLET GREEN SWALLOW\1.jpg' width=200></p>
 
