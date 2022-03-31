@@ -7,7 +7,7 @@ This is the final project for the course 'Intro to ANNs using Tensorflow', WiSe 
 
 ## Introduction
 
-As progress goes on, larger and more powerful neural networks are being developed and tested. Among the Convolutional Neural Networks (CNN) for image classification, a recent one presenting major improvements was Meta's [ConvNeXt](https://arxiv.org/abs/1806.07795). This network is based and built on top of the older [ResNet](https://arxiv.org/abs/1512.03385) architecture, and has shown to reach state-of-the-art performance on the ImageNet dataset, even competing with transformers on tasks such as object detection, image segmentation, and classification tasks.
+As progress goes on, larger and more powerful neural networks are being developed and tested. Among the Convolutional Neural Networks (CNN) for image classification, a recent one presenting major improvements was Meta's [ConvNeXt](https://arxiv.org/abs/2201.03545). This network is based and built on top of the older [ResNet](https://arxiv.org/abs/1512.03385) architecture, and has shown to reach state-of-the-art performance on the ImageNet dataset, even competing with transformers on tasks such as object detection, image segmentation, and classification tasks.
 
 Due to its foundational changes however, even the smallest version of the ConvNeXt, the "ConvNeXt-T" with 28M parameters, seems to be needing a lot more computational power than the predecessor, ResNet. The question now becomes if it is even worth it to train such a large network only to get a small improvement in accuracy for a simple classification task. 
 
