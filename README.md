@@ -2,7 +2,7 @@
 
 <p align="center"><img src='Data\Use\Validation\VIOLET GREEN SWALLOW\1.jpg' width=200></p>
 
-This is the final project for the course 'Intro to ANNs using Tensorflow', WiSe 2021/2022. Please read the [Documentation](Documentation\Documentation.md) for more information. The requirements and user-guide can be found on the bottom of this page. 
+This is the final project for the course 'Intro to ANNs using Tensorflow', WiSe 2021/2022. Please read the [Documentation](Documentation\new_is_not_always_better.pdf) for more information. The requirements and user-guide can be found on the bottom of this page. 
 
 
 ## Introduction
@@ -16,7 +16,7 @@ We therefore decided to compare the performance and energy consumption of ConvNe
 
 ## Description
 
-We used the [Bird Species](https://www.kaggle.com/gpiosenka/100-bird-species) dataset to perform classification on both models. A detailed description of our used data can be found in the [Documentation](Documentation\Documentation.md). The images are stored in the `/Data/Use/` folder and are resized to a size of 224x224 pixels. The dataset consists of 400 bird classes and about 120-140 images per class. This brings the training set to a total of 58,388 images.
+We used the [Bird Species](https://www.kaggle.com/gpiosenka/100-bird-species) dataset to perform classification on both models. A detailed description of our used data can be found in the [Documentation](Documentation\new_is_not_always_better.pdf). The images are stored in the `/Data/Use/` folder and are resized to a size of 224x224 pixels. The dataset consists of 400 bird classes and about 120-140 images per class. This brings the training set to a total of 58,388 images.
 
 <br />
 
