@@ -2,7 +2,8 @@
 
 <p align="center"><img src='Data\Use\Validation\VIOLET GREEN SWALLOW\1.jpg' width=200></p>
 
-This is the final project for the course 'Intro to ANNs using Tensorflow', WiSe 2021/2022. Please read the Documentation for more information. The requirements and user-guide can be found on the bottom of this page. 
+
+New is not always better: a comparison of two image classification networks. 
 
 
 ## Introduction
@@ -12,6 +13,8 @@ As progress goes on, larger and more powerful neural networks are being develope
 Due to its foundational changes however, even the smallest version of the ConvNeXt, the "ConvNeXt-T" with 28M parameters, seems to be needing a lot more computational power than the predecessor, ResNet. The question now becomes if it is even worth it to train such a large network only to get a small improvement in accuracy for a simple classification task. 
 
 We therefore decided to compare the performance and energy consumption of ConvNeXt and ResNet50 on a real-world dataset.
+
+Please read the Documentation for more information. The requirements and user-guide can be found on the bottom of this page. 
 
 
 ## Description
@@ -95,3 +98,10 @@ To run all the shell scripts for training and testing, reading the GPU or runnin
 - `test_models.sh`: loads the trained models (if saved) and tests for accuracy
 - `pipeline.sh`: runs all above scripts in order
 - `gpu_reader.sh`: starts reading GPU power draw and clocks once every 10 seconds, sleeps for 31 seconds, then starts training a specified model. After the training has concluded, the GPU reader stops and saves the data to a CSV file in `Data/GPU/`.
+
+
+### Collaborators
+
+Marlena Reil
+Christian Burmester
+Maximilian Kalcher
